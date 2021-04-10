@@ -104,12 +104,10 @@
 //  note : hiển thị = console.able(arr);
 
 //Bài làm
-console.log("test");
 let arr = ['Apple', 'Banana', "Orange", "Strawberry", "Mango"];
 let loop = true;
 while (loop) {
     let key = prompt("Nhập thao tác bạn muốn thực hiện: ");
-    console.log(key);
     switch (key) {
         case "C":
             let n = prompt("Nhập loại mới:");
