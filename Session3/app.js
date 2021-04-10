@@ -141,10 +141,8 @@ while (loop) {
             let str = prompt("Nhập chuỗi muốn tìm:");
             for (let i = 0; i < arr.length; i++) {
                 if (arr[i].indexOf(str) != -1) {
-                    console.log(arr[i]);
-                } else {
-                    alert("Không có chuỗi cần tìm!");
-                }
+                    console.table(arr[i]);
+                } 
             }
             break;
         case "0":
