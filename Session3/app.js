@@ -141,7 +141,7 @@ while (loop) {
             let str = prompt("Nhập chuỗi muốn tìm:");
             for (let i = 0; i < arr.length; i++) {
                 if (arr[i].indexOf(str) != -1) {
-                    console.table(arr[i]);
+                    console.log(arr[i]);
                 } 
             }
             break;
