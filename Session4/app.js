@@ -3,7 +3,7 @@
 // function
 //sort();
 // map();
-// join(); slice();
+// join(); slice(); reverse();
 
 // Bài tập Session 4
 // Luyện tập Array
@@ -175,18 +175,19 @@
 // let n = Number(prompt("Nhập n là kích thước mảng con:"));
 // let result = [];
 // for (let i = 0; i < arr.length; i += n) {
-//     result.push(arr.slice(i, i + n));
+//     let newArr = arr.slice(i,  i + n);
+//     result.push(newArr);
 // }
 // console.log(result);
 
 // 8. Cho người dùng nhập vào string dạng 1,2,3,4,5,6
 // a. Biến string đó thành mảng
-// b. Tìm giá trị lớn nhất có thể đạt được của hiệu 2 số bất kì trong mảng đó
+// b. Tìm giá trị lớn nhất có thể đạt được của hiệu 2 số bất kì trong mảng đó => hieu = max - min
 // Ví dụ:
 // Input: [1, 2, 3, 8, 9]
 // Output: 8 (là hiệu của 9 và 1)
 
-// a.
+// // a.
 // let arr = [];
 // let str = String(prompt('Nhập chuỗi số nguyên:'));
 // let ar = str.split(","); 
@@ -195,14 +196,15 @@
 // }
 // console.log(arr);
 
-//b.
+// // b.
 // arr.sort(
 //     function(a,b){
 //         return a-b;
 //     }
 // )
-// let min = arr[arr.length -1]-arr[0];
-// console.log(`${min} là hiệu của ${arr[arr.length -1]} và ${arr[0]}`);
+// console.log(`Mảng đã sắp tăng dần ${arr}`);
+// let subMax = arr[arr.length -1]-arr[0];
+// console.log(`${subMax} là hiệu của ${arr[arr.length -1]} và ${arr[0]}`);
 
 // 9. Cho người dùng nhập vào string dạng 1,2,3,4,5,6
 // a. Biến string đó thành mảng
@@ -219,7 +221,7 @@
 //     arr.push(Number(ar[i]));  
 // }
 // console.log(arr);
-// b.
+// // b.
 // function mode(array) {
 //     if (array.length == 0)
 //         return null;
@@ -246,6 +248,36 @@
 // }
 // console.log(mode(arr));
 
+// // Cách 2:
+// let input = prompt("Nhap vao chuoi so: ");
+// let arr = input.split(",");
+// let len = arr.length;
+// for (let i = 0; i < len; i++) {
+//   arr[i] = parseInt(arr[i], 10);
+// }
+// arr.sort(function (a, b) {
+//   return a - b;
+// });
+// let min = arr[0];
+// let max = arr[len - 1];
+// let checkArr = [];
+// for (let i = min; i <= max; i++) {
+//   checkArr[i] = 0;
+// }
+// for (let i = 0; i < len; i++) {
+//   let tmp = arr[i];
+//   checkArr[tmp]++;
+// }
+// let finalArr = [];
+// let max_ = checkArr[min];
+// for (let i = min; i <= max; i++) {
+//   if (checkArr[i] >= max_) max_ = checkArr[i];
+// }
+// for (let i = min; i <= max; i++) {
+//   if (checkArr[i] == max_) finalArr.push(i);
+// }
+// console.log(finalArr);
+
 // 10. Cho người dùng nhập vào 1 chuỗi bất kỳ
 // Kiểm tra xem chuỗi đó có phải dạng palindrome không 
 // Ví dụ: "eye" đảo ngược === "eye" => palindrome
@@ -253,12 +285,11 @@
 // Nếu đúng là dạng đó => In ra correct
 // Nếu không => In ra false
 
-// let s = String(prompt(`Nhập vào một chuỗi bất kì:`));
-// let n = s.split("");
-// console.log(s);
-// console.log(n);
-// console.log(n.reverse());
-// if(JSON.stringify(n)===JSON.stringify(n.reverse())){
+// let str = String(prompt(`Nhập vào một chuỗi bất kì:`));
+// let arr = str.split("");
+// console.log(str);
+// console.log(arr);
+// if(JSON.stringify(arr)===JSON.stringify(arr.reverse())){
 //     console.log(`Correct`);
 // } else{
 //     console.log(`false`);
