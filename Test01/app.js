@@ -144,73 +144,295 @@
 // Ngày 30/04/2019 là ngày hợp lệ” “Ngày tiếp theo là: 01/5/2019
 // Ngày 31/12/2020 là ngày hợp lệ” “Ngày tiếp theo là: 01/01/2021
 
-let day = Number(prompt("Nhập ngày:"));
-let month = Number(prompt("Nhập tháng:"));
-let year = Number(prompt("Nhập năm:"));
+// let day = Number(prompt("Nhập ngày:"));
+// let month = Number(prompt("Nhập tháng:"));
+// let year = Number(prompt("Nhập năm:"));
 
-switch (month) {
-    case 1:
-    case 3:
-    case 5:
-    case 7:
-    case 8:
-    case 10:
-    case 12:
-        if (day > 0 && day <= 31) {
-            console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
-            if (day === 31 && month === 12) {
-                console.log(`Ngày tiếp theo là: ${day - 30}/01/${year + 1}`);
-            } else if (day === 31 && month < 12 ) {
-                console.log(`Ngày tiếp theo là: ${day - 30}/${month + 1}/${year}`);
-            } else {
-                console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
+// switch (month) {
+//     case 1:
+//     case 3:
+//     case 5:
+//     case 7:
+//     case 8:
+//     case 10:
+//     case 12:
+//         if (day > 0 && day <= 31) {
+//             console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
+//             if (day === 31 && month === 12) {
+//                 console.log(`Ngày tiếp theo là: ${day - 30}/01/${year + 1}`);
+//             } else if (day === 31 && month < 12 ) {
+//                 console.log(`Ngày tiếp theo là: ${day - 30}/${month + 1}/${year}`);
+//             } else {
+//                 console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
+//             }
+//         } else {
+//             console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
+//         }
+//         break;
+//     case 4:
+//     case 6:
+//     case 9:
+//     case 11:
+//         if (day > 0 && day <= 30) {
+//             console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
+//             if (day === 30) {
+//                 console.log(`Ngày tiếp theo là: ${day - 29}/${month + 1}/${year}`);
+//             } else {
+//                 console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
+//             }
+//         } else {
+//             console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
+//         }
+//         break;
+//     case 2:
+//         if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0)) {
+//             console.log(`${year} là năm nhuận`);
+//             if (day > 0 && day <= 29) {
+//                 console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
+//                 if (day === 29) {
+//                     console.log(`Ngày tiếp theo là: ${day - 28}/${month + 1}/${year}`);
+//                 } else {
+//                     console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
+//                 }
+//             } else {
+//                 console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
+//             }
+//         } else {
+//             console.log(`${year} không là năm nhuận`);
+//             if (day > 0 && day <= 28) {
+//                 console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
+//                 if (day === 28) {
+//                     console.log(`Ngày tiếp theo là: ${day - 27}/${month + 1}/${year}`);
+//                 } else {
+//                     console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
+//                 }
+//             } else {
+//                 console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
+//             }
+//         }
+//         break;
+//         default:
+//             break;
+// }
+
+// // Cách 2
+// let userInput = prompt("Please input your date");
+// // a/b/c
+// let day = Number(userInput.split("/")[0]);
+// let month = Number(userInput.split("/")[1]);
+// let year = Number(userInput.split("/")[2]);
+// let nextDay;
+// let nextMonth;
+// let nextYear;
+
+// let isNumber = !isNaN(day) && !isNaN(month) && !isNaN(year);
+// function isLeapYear(year) {
+//     if (year % 4 === 0 && year !== 100) {
+//         return true;
+//     }
+//     if (year % 400 === 0) {
+//         return true
+//     }
+//     return false;
+// }
+// if (isNumber) {
+//     if (year >= 0) {
+//         if (month >= 1 && month <= 12) {
+//             switch (month) {
+//                 case 1:
+//                 case 3:
+//                 case 5:
+//                 case 7:
+//                 case 8:
+//                 case 10:
+//                 case 12:
+//                     if (day >= 1 && day <= 31) {
+//                         console.log(`Ngày ${userInput} hợp lệ`);
+//                         if (day === 31 && month === 12) {
+//                             nextDay = 1;
+//                             nextMonth = 1;
+//                             nextYear = year + 1;
+//                         } else if (day === 31) {
+//                             nextDay = 1;
+//                             nextMonth = month + 1;
+//                             nextYear = year;
+//                         } else {
+//                             nextDay = day + 1;
+//                             nextMonth = month;
+//                             nextYear = year;
+//                         }
+//                     } else {
+//                         console.log("Ngày không hợp lệ");
+//                     }
+//                     break;
+//                 case 4:
+//                 case 6:
+//                 case 9:
+//                 case 11:
+//                     if (day >= 1 && day <= 30) {
+//                         console.log(`Ngày ${userInput} hợp lệ`);
+//                         if (day === 31) {
+//                             nextDay = 1;
+//                             nextMonth = month + 1;
+//                             nextYear = year;
+//                         } else {
+//                             nextDay = day + 1;
+//                             nextMonth = month;
+//                             nextYear = year;
+//                         }
+//                     } else {
+//                         console.log("Ngày không hợp lệ");
+//                     }
+//                     break;
+//                     break;
+//                 case 2:
+//                     if (isLeapYear(year)) {
+//                         if (day >= 1 && day <= 29) {
+//                             console.log(`Ngày ${userInput} hợp lệ`);
+//                             if (day === 31) {
+//                                 nextDay = 1;
+//                                 nextMonth = month + 1;
+//                                 nextYear = year;
+//                             } else {
+//                                 nextDay = day + 1;
+//                                 nextMonth = month;
+//                                 nextYear = year;
+//                             }
+//                         } else {
+//                             console.log("Ngày không hợp lệ");
+//                         }
+
+
+//                     } else if {
+//                         console.log("Ngày không hợp lệ");
+//                     }
+//                     break;
+//                 default:
+//                     break;
+//             }
+//         }
+
+//     } else {
+//         console.log("Ngày không hợp lệ");
+//     }
+// } else {
+//     console.log("Ngày không hợp lệ");
+// }
+
+// Cách 2:...
+let userInput = prompt("Please input your date");
+// a/b/c
+let day = Number(userInput.split("/")[0]);
+let month = Number(userInput.split("/")[1]);
+let year = Number(userInput.split("/")[2]);
+let nextDay;
+let nextMonth;
+let nextYear;
+
+let isNumber = !isNaN(day) && !isNaN(month) && !isNaN(year);
+
+function isLeapYear(year) {
+    if(year % 4 === 0 && year % 100 !== 0) {
+        return true;
+    }
+    if(year % 400 === 0) {
+        return true;
+    }
+    return false;
+}
+
+if(isNumber) {
+    if(year >= 0) {
+        if(month >= 1 && month <= 12){
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if(day >= 1 && day <= 31){
+                        console.log(`Ngày ${userInput} hợp lệ`)
+                        if(day === 31 && month === 12){
+                            nextDay = 1;
+                            nextMonth = 1;
+                            nextYear = year + 1;
+                        } else if (day === 31) {
+                            nextDay = 1;
+                            nextMonth = month + 1;
+                            nextYear = year;
+                        } else {
+                            nextDay = day + 1;
+                            nextMonth = month;
+                            nextYear  = year;
+                        }
+                    } else {
+                        console.log("Ngày không hợp lệ")
+                    }
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if(day >= 1 && day <= 30){
+                        console.log(`Ngày ${userInput} hợp lệ`);
+                        if (day === 30) {
+                            nextDay = 1;
+                            nextMonth = month + 1;
+                            nextYear = year;
+                        } else {
+                            nextDay = day + 1;
+                            nextMonth = month;
+                            nextYear  = year;
+                        }
+                    } else {
+                        console.log("Ngày không hợp lệ")
+                    }
+                    break;
+                case 2:
+                    if(isLeapYear(year)){
+                        if(day >= 1 && day <= 29){
+                            console.log(`Ngày ${userInput} hợp lệ`);
+                            if (day === 29) {
+                                nextDay = 1;
+                                nextMonth = 3;
+                                nextYear = year;
+                            } else {
+                                nextDay = day + 1;
+                                nextMonth = month;
+                                nextYear  = year;
+                            }
+                        } else {
+                            console.log("Ngày không hợp lệ")
+                        }
+                    } else {
+                        if(day >= 1 && day <= 28){
+                            console.log(`Ngày ${userInput} hợp lệ`);
+                            if (day === 28) {
+                                nextDay = 1;
+                                nextMonth = 3;
+                                nextYear = year;
+                            } else {
+                                nextDay = day + 1;
+                                nextMonth = month;
+                                nextYear  = year;
+                            }
+                        } else {
+                            console.log("Ngày không hợp lệ")
+                        }
+                    }
+                    break;
+                default:
+                    break;
             }
+            console.log(`Ngày tiếp theo là ${nextDay}/${nextMonth}/${nextYear}`)
         } else {
-            console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
+            console.log("Ngày không hợp lệ");
         }
-        break;
-    case 4:
-    case 6:
-    case 9:
-    case 11:
-        if (day > 0 && day <= 30) {
-            console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
-            if (day === 30) {
-                console.log(`Ngày tiếp theo là: ${day - 29}/${month + 1}/${year}`);
-            } else {
-                console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
-            }
-        } else {
-            console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
-        }
-        break;
-    case 2:
-        if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0)) {
-            console.log(`${year} là năm nhuận`);
-            if (day > 0 && day <= 29) {
-                console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
-                if (day === 29) {
-                    console.log(`Ngày tiếp theo là: ${day - 28}/${month + 1}/${year}`);
-                } else {
-                    console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
-                }
-            } else {
-                console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
-            }
-        } else {
-            console.log(`${year} không là năm nhuận`);
-            if (day > 0 && day <= 28) {
-                console.log(`Ngày ${day}/${month}/${year} là ngày hợp lệ.`)
-                if (day === 28) {
-                    console.log(`Ngày tiếp theo là: ${day - 27}/${month + 1}/${year}`);
-                } else {
-                    console.log(`Ngày tiếp theo là: ${day + 1}/${month}/${year}`);
-                }
-            } else {
-                console.log(`Ngày ${day}/${month}/${year} là ngày không hợp lệ.`)
-            }
-        }
-        break;
-        default:
-            break;
+    } else {
+        console.log("Ngày không hợp lệ");
+    }
+} else {
+    console.log("Ngày không hợp lệ");
 }

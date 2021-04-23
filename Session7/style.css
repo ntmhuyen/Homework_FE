@@ -1,0 +1,98 @@
+/* FB  */
+
+.container {
+    box-sizing: border-box;
+    width: 940px;
+    position: relative;
+    margin: auto;
+}
+
+.container .cover {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.container .edit {
+    position: relative;
+}
+
+.container .edit .edit-img {
+    width: 20px;
+    height: 20px;
+    background-image: url(./content/icon/camera.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 50px;
+    right: 180px;
+    z-index: 3;
+}
+
+.container .edit a {
+    position: absolute;
+    bottom: 40px;
+    right: 20px;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    padding: 10px 10px 10px 40px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: Arial;
+    z-index: 2;
+}
+
+.container .avatar {
+    width: 168px;
+    height: 168px;
+    border: 4px solid #E4E6EB;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 90px);
+    z-index: 1;
+}
+
+.container .avatar-camera {
+    background-color: #E4E6EB;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+    left: 54%;
+}
+
+.avatar-camera .camera-img {
+    width: 30px;
+    height: 30px;
+    background-image: url(./content/icon/camera.svg);
+    background-size: contain;
+    position: absolute;
+    bottom: 10px;
+    left: 22%;
+    z-index: 3;
+}
+
+.name {
+    margin-top: 20px;
+}
+
+.name .fullname {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Arial;
+}
+
+.name .more_description {
+    font-size: 17px;
+    font-weight: 700;
+    font-family: Arial;
+    color: #1876F2;
+    text-decoration: none;
+    position: absolute;
+    left: calc(50% - 55px);
+}
