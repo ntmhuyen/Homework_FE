@@ -1,7 +1,7 @@
 // JS HTML DOM 
 var btn1 = document.getElementById("btn1");
-console.log(btn1);
 var div1 = document.getElementById("div1");
+console.log(btn1);
 console.log(div1);
 
 btn1.onclick = function() {
