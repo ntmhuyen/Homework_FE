@@ -1,23 +1,21 @@
 *{
-    font-size: 18px;
+    font-size: 15px;
+    box-sizing: border-box;
 }
-.box{
-    width: 1000px;
-    min-height: 100%;
+.content{
+    width: 700px;
+    height: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end; 
 }
 .box-item{
-    width: 450px;
-    height: 450px;
+    width: 300px;
+    height: 300px;
 }
-.box-item h1{
-    color:black;
-}
-.click{
-    margin:15px 0;
+#btn1, #btn2, #btn3, #btn4 {
+    margin-bottom: 15px;
 }
 .div{
     padding: 5px;
@@ -26,16 +24,10 @@
     width: 150px;
     height: 150px;
 }
-
-.hidden{
-    display: none;
-}
-
 .div-3{
     padding: 5px;
     background-color:dodgerblue;
     color:#fff;
-    font-size: 20px;
     width: 100px;
     height: 100px;
     display: block;
@@ -46,5 +38,10 @@
 }
 
 #div4{
+    background-color: cornflowerblue;
     font-size: 14px;
+}
+
+.hidden{
+    display: none;
 }
