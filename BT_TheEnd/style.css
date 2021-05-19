@@ -1,0 +1,324 @@
+*{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'GoogleSans-Regular';
+    src: url('./content/font/GoogleSans-Regular.otf') format('opentype');
+}
+body{
+    margin: 0;
+    font-family: GoogleSans-Regular;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #333333;
+    background-color: #f5f5f5;
+    /* min-width: 1200px !important; */
+    width: 100%;
+    text-align: left;
+}
+div {
+    display: block;
+}
+header{
+    height: 92px;
+    background-color: antiquewhite;
+}
+footer{
+    background-color: aquamarine;
+}
+main{
+    width: 95%;
+    margin: auto;
+    display:block;
+    /* background-color:thistle; */
+}
+
+/* breadcrumb */
+
+#breadcrumb{
+    margin: 12px 0;
+}
+.container{
+    width: 100%;
+    /* width: 1210px !important;
+    min-width: 1210px !important;
+    max-width: 1210px !important; */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.m-0{
+    margin: 0 !important;
+}
+#breadcrumb .item{
+    margin-right: 20px;
+}
+#breadcrumb .item::after {
+    content: "/";
+    margin-left: 10px;
+}
+#breadcrumb .item:last-child::after {
+    display: none;
+}
+#breadcrumb .item a{
+    color: #666;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* title */
+
+h1{
+    font-weight: 500;
+    line-height: 1.2;
+}
+.bg-white{
+background-color: #fff !important;
+}
+.border-bottom{
+    border-bottom: 1px solid #dee2e6!important;
+}
+.mb-0, .my-0{
+    margin-bottom: 0 !important;
+}
+.p-3{
+    padding: 1rem !important;
+}
+.text-18{
+    font-size: 18px;
+}
+.w-100{
+    width: 100% !important;
+}
+
+/* detail */
+.d-flex{
+    display: flex !important;
+}
+.col{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+/* column-1-img */
+.detail-type-2 .column-1 {
+    max-width: 420px;
+    margin-left: 10px;
+}
+
+/* column-2-content */
+.detail-type-2 .column-2 {
+    margin-left: 10px;
+    padding-top: 20px;
+}
+.detail-type-2 .price {
+    font-weight: bold;
+    font-size: 25px;
+    color: #ef1200;
+    display: block;
+    line-height: 30px;
+}
+.detail-type-2 .summary {
+    margin: 10px 0;
+    display: block;
+}
+/* product */
+.flex-wrap {
+    flex-wrap: wrap!important;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.detail-type-2 .product-config ul li.active {
+    border-color: #ef1705;
+    font-weight: bold;
+    position: relative;
+    background-color: #fff;
+}
+.detail-type-2 .product-config ul li {
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    max-width: calc(33% - 5px);
+    margin-right: 5px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.detail-type-2 .product-config ul li:hover{
+    background-color:#cccccc;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+.detail-type-2 .product-config ul li.active::before {
+    content: url(./content/icon/check-square-red.svg);
+    position: absolute;
+    top: -3px;
+    right: -1px;
+}
+.detail-type-2 .product-config ul li a {
+    color: #333;
+}
+
+/* config-holder */
+#config-holder span.name {
+    width: 90px;
+}
+#config-holder ul {
+    display: inline-block;
+    width: 100%;
+}
+#config-holder ul {
+    width: calc(100% - 90px) !important;
+}
+#config-holder ul li.selected-attr-value {
+    border-color: #ff9300 !important;
+    border-width: 2px !important;
+}
+#config-holder ul li {
+    float: left;
+    margin-right: 5px;
+    border: solid 1px #aaa;
+    padding: 1px 10px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    height: 23px;
+    overflow: hidden;
+    color: #333;
+}
+#config-holder ul li {
+    margin-bottom: 5px;
+}
+#config-holder ul li.selected-attr-value::before {
+    content: '';
+    background: url(./content/icon/checkbox-product-1.png) right bottom no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+}
+
+/* product-warranty */
+.d-block {
+    display: block!important;
+}
+.mb-2, .my-2 {
+    margin-bottom: .5rem!important;
+}
+/* promotion */
+.block-detail .p-promotion {
+    border: 1px solid #e1e1e1;
+}
+.block-detail .p-promotion li {
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
+.block-detail .p-promotion .promotion-title {
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    background-color: #f52131;
+    display: block;
+    line-height: 37px;
+    padding: 0 10px;
+    margin: 0 -10px;
+}
+.block-detail .p-promotion li.private-offer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 25px !important;
+    margin: 8px 0;
+}
+li.private-offer::before {
+    content: url(./content/icon/check.svg);
+    position: absolute;
+    left: 8px;
+    top: 2px;
+}
+.block-detail .p-promotion li.private-offer .kmai {
+    display: flex;
+    justify-content: space-between;
+}
+li.private-offer span.gia-kmai {
+    color: #f34343;
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 85px;
+    text-align: right;
+}
+li.private-offer span {
+    line-height: 21px;
+}
+li.private-offer span.kmai-info {
+    display: flex;
+    align-items: center;
+}
+li.private-offer span.desc-kmai {
+    margin-left: 8px;
+    line-height: 22px;
+    white-space: pre-line;
+}
+/* hotline  */
+.detail-type-2 .hotline {
+    margin-top: 10px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.detail-type-2 .hotline a {
+    font-weight: bold;
+    color: #00bf12;
+}
+/* active-buy */
+.align-items-center {
+    align-items: center!important;
+}
+.justify-content-between {
+    justify-content: space-between!important;
+}
+
+.detail-type-2 .buy-now, .detail-type-2 .buy-deal {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(#ffba28, #ff9401);
+    display: block;
+    line-height: 1.8rem;
+    text-align: center;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+.text-13 {
+    font-size: 13px;
+}
+.fw-4 {
+    font-weight: 400;
+}
+.d-block {
+    display: block!important;
+}
